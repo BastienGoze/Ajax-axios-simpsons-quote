@@ -20,6 +20,7 @@
             <h1 class="title">Simpson API</h1>
 
             <div class="content" id="quote-simpson"></div>
+            <input type="button" value="New quote" class="new-quote" />
         </div>
     </section>
 
@@ -43,10 +44,15 @@
 
                     document.querySelector('#quote-simpson').innerHTML = quoteHtml;
                 });
-                    
-            }
+
+        }
 
         fetchQuoteSimpsons();
+
+        let button = document.querySelector('.new-quote');
+        button.addEventListener('click', () => {
+            fetchQuoteSimpsons()
+        })
     </script>
 </body>
 
